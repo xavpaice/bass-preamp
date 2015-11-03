@@ -1,0 +1,608 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:basspreamp-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Bass Preamp"
+Date "2015-10-13"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 "To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/."
+Comment3 "This work is licensed under the Creative Commons Attribution 4.0 International License. "
+Comment4 "For U-Bass clone"
+$EndDescr
+$Comp
+L CONN_01X02 P1
+U 1 1 561CBBD5
+P 1800 3250
+F 0 "P1" H 1800 3400 50  0000 C CNN
+F 1 "INPUT" V 1900 3250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1800 3250 60  0001 C CNN
+F 3 "" H 1800 3250 60  0000 C CNN
+	1    1800 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 561CBD30
+P 2400 3750
+F 0 "R3" V 2480 3750 50  0000 C CNN
+F 1 "10M" V 2400 3750 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 2330 3750 30  0001 C CNN
+F 3 "" H 2400 3750 30  0000 C CNN
+	1    2400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 561CBDD3
+P 3150 2550
+F 0 "R4" V 3230 2550 50  0000 C CNN
+F 1 "6K8" V 3150 2550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3080 2550 30  0001 C CNN
+F 3 "" H 3150 2550 30  0000 C CNN
+	1    3150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 561CBE1C
+P 3150 3800
+F 0 "R5" V 3230 3800 50  0000 C CNN
+F 1 "680R" V 3150 3800 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 3080 3800 30  0001 C CNN
+F 3 "" H 3150 3800 30  0000 C CNN
+	1    3150 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 561CBE5B
+P 3700 2900
+F 0 "C2" H 3725 3000 50  0000 L CNN
+F 1 "10uF" H 3725 2800 50  0000 L CNN
+F 2 "Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5" H 3738 2750 30  0001 C CNN
+F 3 "" H 3700 2900 60  0000 C CNN
+	1    3700 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CP C1
+U 1 1 561CBF06
+P 900 2650
+F 0 "C1" H 925 2750 50  0000 L CNN
+F 1 "10uF" H 925 2550 50  0000 L CNN
+F 2 "Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5" H 938 2500 30  0001 C CNN
+F 3 "" H 900 2650 60  0000 C CNN
+	1    900  2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NJFET_DSG Q1
+U 1 1 561CC12F
+P 3050 3200
+F 0 "Q1" H 3350 3250 50  0000 R CNN
+F 1 "J201" H 3400 3150 50  0000 R CNN
+F 2 "Housings_TO-92:TO-92_Inline_Narrow_Oval" H 3250 3300 29  0001 C CNN
+F 3 "" H 3050 3200 60  0000 C CNN
+	1    3050 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 561CC1E7
+P 4100 3500
+F 0 "R7" V 4180 3500 50  0000 C CNN
+F 1 "100K" V 4100 3500 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4030 3500 30  0001 C CNN
+F 3 "" H 4100 3500 30  0000 C CNN
+	1    4100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3200 2850 3200
+Wire Wire Line
+	2400 3600 2400 3200
+Connection ~ 2400 3200
+Wire Wire Line
+	3150 3400 3150 3650
+Wire Wire Line
+	4100 2700 4100 3350
+$Comp
+L Earth #PWR01
+U 1 1 561CC5BE
+P 2000 4250
+F 0 "#PWR01" H 2000 4000 50  0001 C CNN
+F 1 "Earth" H 2000 4100 50  0001 C CNN
+F 2 "" H 2000 4250 60  0000 C CNN
+F 3 "" H 2000 4250 60  0000 C CNN
+	1    2000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR02
+U 1 1 561CC5E2
+P 2400 4250
+F 0 "#PWR02" H 2400 4000 50  0001 C CNN
+F 1 "Earth" H 2400 4100 50  0001 C CNN
+F 2 "" H 2400 4250 60  0000 C CNN
+F 3 "" H 2400 4250 60  0000 C CNN
+	1    2400 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR03
+U 1 1 561CC606
+P 3150 4250
+F 0 "#PWR03" H 3150 4000 50  0001 C CNN
+F 1 "Earth" H 3150 4100 50  0001 C CNN
+F 2 "" H 3150 4250 60  0000 C CNN
+F 3 "" H 3150 4250 60  0000 C CNN
+	1    3150 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR04
+U 1 1 561CC62A
+P 4100 4250
+F 0 "#PWR04" H 4100 4000 50  0001 C CNN
+F 1 "Earth" H 4100 4100 50  0001 C CNN
+F 2 "" H 4100 4250 60  0000 C CNN
+F 3 "" H 4100 4250 60  0000 C CNN
+	1    4100 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3650 4100 4250
+Wire Wire Line
+	3150 3950 3150 4250
+Wire Wire Line
+	2400 3900 2400 4250
+Wire Wire Line
+	2000 3300 2000 4250
+$Comp
+L +BATT #PWR05
+U 1 1 561CC8A1
+P 900 2150
+F 0 "#PWR05" H 900 2000 50  0001 C CNN
+F 1 "+BATT" H 900 2290 50  0000 C CNN
+F 2 "" H 900 2150 60  0000 C CNN
+F 3 "" H 900 2150 60  0000 C CNN
+	1    900  2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 561CCA5A
+P 4100 2550
+F 0 "R6" V 4180 2550 50  0000 C CNN
+F 1 "100K" V 4100 2550 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4030 2550 30  0001 C CNN
+F 3 "" H 4100 2550 30  0000 C CNN
+	1    4100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2200 4100 2400
+Wire Wire Line
+	3150 2400 3150 2200
+Connection ~ 3150 2200
+Connection ~ 4100 2900
+$Comp
+L TL072 U1
+U 1 1 561CCF45
+P 5100 3000
+F 0 "U1" H 5050 3200 60  0000 L CNN
+F 1 "TL072" H 5050 2750 60  0000 L CNN
+F 2 "Sockets_DIP:DIP-8__300_ELL" H 5100 3000 60  0001 C CNN
+F 3 "" H 5100 3000 60  0000 C CNN
+	1    5100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2200 5000 2600
+Connection ~ 4100 2200
+$Comp
+L Earth #PWR06
+U 1 1 561CCFC3
+P 5000 3500
+F 0 "#PWR06" H 5000 3250 50  0001 C CNN
+F 1 "Earth" H 5000 3350 50  0001 C CNN
+F 2 "" H 5000 3500 60  0000 C CNN
+F 3 "" H 5000 3500 60  0000 C CNN
+	1    5000 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3400 5000 3500
+$Comp
+L R R8
+U 1 1 561CD0AD
+P 5100 3800
+F 0 "R8" V 5180 3800 50  0000 C CNN
+F 1 "10K" V 5100 3800 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5030 3800 30  0001 C CNN
+F 3 "" H 5100 3800 30  0000 C CNN
+	1    5100 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 3800 5600 3800
+Wire Wire Line
+	5600 3000 5600 5100
+Connection ~ 4100 4200
+$Comp
+L R R9
+U 1 1 561CD419
+P 6150 3000
+F 0 "R9" V 6230 3000 50  0000 C CNN
+F 1 "33K" V 6150 3000 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 3000 30  0001 C CNN
+F 3 "" H 6150 3000 30  0000 C CNN
+	1    6150 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L POT RV1
+U 1 1 561CD499
+P 7000 3000
+F 0 "RV1" H 7000 2900 50  0000 C CNN
+F 1 "B100K" H 7000 3000 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_WirePads_largePads" H 7000 3000 60  0001 C CNN
+F 3 "" H 7000 3000 60  0000 C CNN
+	1    7000 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R12
+U 1 1 561CD4E0
+P 7850 3000
+F 0 "R12" V 7930 3000 50  0000 C CNN
+F 1 "33K" V 7850 3000 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7780 3000 30  0001 C CNN
+F 3 "" H 7850 3000 30  0000 C CNN
+	1    7850 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R11
+U 1 1 561CD557
+P 7000 3650
+F 0 "R11" V 7080 3650 50  0000 C CNN
+F 1 "33K" V 7000 3650 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6930 3650 30  0001 C CNN
+F 3 "" H 7000 3650 30  0000 C CNN
+	1    7000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 561CD5F4
+P 7000 2450
+F 0 "C3" H 7025 2550 50  0000 L CNN
+F 1 "473" H 7025 2350 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Disc_D12_P7.75" H 7038 2300 30  0001 C CNN
+F 3 "" H 7000 2450 60  0000 C CNN
+	1    7000 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L C C4
+U 1 1 561CD6A7
+P 7000 4500
+F 0 "C4" H 7025 4600 50  0000 L CNN
+F 1 "222" H 7025 4400 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Rect_L7_W3.5_P5" H 7038 4350 30  0001 C CNN
+F 3 "" H 7000 4500 60  0000 C CNN
+	1    7000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 561CD943
+P 6150 5100
+F 0 "R10" V 6230 5100 50  0000 C CNN
+F 1 "10K" V 6150 5100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6080 5100 30  0001 C CNN
+F 3 "" H 6150 5100 30  0000 C CNN
+	1    6150 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L POT RV2
+U 1 1 561CD949
+P 7000 5100
+F 0 "RV2" H 7000 5000 50  0000 C CNN
+F 1 "B100K" H 7000 5100 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_WirePads_largePads" H 7000 5100 60  0001 C CNN
+F 3 "" H 7000 5100 60  0000 C CNN
+	1    7000 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R13
+U 1 1 561CD94F
+P 7850 5100
+F 0 "R13" V 7930 5100 50  0000 C CNN
+F 1 "10K" V 7850 5100 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 7780 5100 30  0001 C CNN
+F 3 "" H 7850 5100 30  0000 C CNN
+	1    7850 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5600 3000 6000 3000
+Wire Wire Line
+	6300 3000 6750 3000
+Wire Wire Line
+	7250 3000 7700 3000
+Wire Wire Line
+	6850 2450 6550 2450
+Wire Wire Line
+	6550 2450 6550 3000
+Connection ~ 6550 3000
+Wire Wire Line
+	7150 2450 7500 2450
+Wire Wire Line
+	7500 2450 7500 3000
+Connection ~ 7500 3000
+Wire Wire Line
+	7000 4950 7000 4650
+Wire Wire Line
+	7000 4350 7000 3800
+Wire Wire Line
+	7000 3500 7000 3150
+Wire Wire Line
+	6300 5100 6750 5100
+Wire Wire Line
+	7250 5100 7700 5100
+Connection ~ 5600 3800
+$Comp
+L TL072 U1
+U 2 1 561CE4B3
+P 8250 4100
+F 0 "U1" H 8200 4300 60  0000 L CNN
+F 1 "TL072" H 8200 3850 60  0000 L CNN
+F 2 "Sockets_DIP:DIP-8__300_ELL" H 8250 4100 60  0001 C CNN
+F 3 "" H 8250 4100 60  0000 C CNN
+	2    8250 4100
+	1    0    0    1   
+$EndComp
+Connection ~ 7000 4000
+Wire Wire Line
+	8750 3000 8750 5100
+Connection ~ 8750 4100
+$Comp
+L Earth #PWR07
+U 1 1 561CEE26
+P 900 2950
+F 0 "#PWR07" H 900 2700 50  0001 C CNN
+F 1 "Earth" H 900 2800 50  0001 C CNN
+F 2 "" H 900 2950 60  0000 C CNN
+F 3 "" H 900 2950 60  0000 C CNN
+	1    900  2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 561CF3DC
+P 1250 2450
+F 0 "R1" V 1330 2450 50  0000 C CNN
+F 1 "100K" V 1250 2450 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1180 2450 30  0001 C CNN
+F 3 "" H 1250 2450 30  0000 C CNN
+	1    1250 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 561CF42B
+P 1250 2900
+F 0 "R2" V 1330 2900 50  0000 C CNN
+F 1 "100K" V 1250 2900 50  0000 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 1180 2900 30  0001 C CNN
+F 3 "" H 1250 2900 30  0000 C CNN
+	1    1250 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR08
+U 1 1 561CF49E
+P 1250 3200
+F 0 "#PWR08" H 1250 2950 50  0001 C CNN
+F 1 "Earth" H 1250 3050 50  0001 C CNN
+F 2 "" H 1250 3200 60  0000 C CNN
+F 3 "" H 1250 3200 60  0000 C CNN
+	1    1250 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2150 900  2500
+Wire Wire Line
+	1250 2300 1250 2200
+Connection ~ 1250 2200
+Wire Wire Line
+	1250 2600 1250 2750
+Wire Wire Line
+	1250 3050 1250 3200
+Wire Wire Line
+	900  2950 900  2800
+Connection ~ 900  2200
+Text GLabel 1500 2650 2    60   Output ~ 0
++4.5V
+Wire Wire Line
+	1500 2650 1250 2650
+Connection ~ 1250 2650
+Text GLabel 7700 4200 0    60   Input ~ 0
++4.5V
+Wire Wire Line
+	7700 4200 7750 4200
+$Comp
+L CONN_01X02 P2
+U 1 1 561D0A8F
+P 10300 4650
+F 0 "P2" H 10300 4800 50  0000 C CNN
+F 1 "OUTPUT" V 10400 4650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 10300 4650 60  0001 C CNN
+F 3 "" H 10300 4650 60  0000 C CNN
+	1    10300 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Earth #PWR09
+U 1 1 561D1028
+P 9900 5100
+F 0 "#PWR09" H 9900 4850 50  0001 C CNN
+F 1 "Earth" H 9900 4950 50  0001 C CNN
+F 2 "" H 9900 5100 60  0000 C CNN
+F 3 "" H 9900 5100 60  0000 C CNN
+	1    9900 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 3000 3150 2700
+Wire Wire Line
+	3550 2900 3150 2900
+Connection ~ 3150 2900
+Wire Wire Line
+	3850 2900 4600 2900
+Wire Wire Line
+	5000 2200 900  2200
+Wire Wire Line
+	8000 3000 8750 3000
+Wire Wire Line
+	8750 5100 8000 5100
+Wire Wire Line
+	7000 4000 7750 4000
+Wire Wire Line
+	5600 5100 6000 5100
+$Comp
+L POT RV3
+U 1 1 561D44DC
+P 9300 4600
+F 0 "RV3" H 9300 4500 50  0000 C CNN
+F 1 "A100K" H 9300 4600 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_WirePads_largePads" H 9300 4600 60  0001 C CNN
+F 3 "" H 9300 4600 60  0000 C CNN
+	1    9300 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L CP C6
+U 1 1 561D45B1
+P 9000 4100
+F 0 "C6" H 9025 4200 50  0000 L CNN
+F 1 "10uF" H 9025 4000 50  0000 L CNN
+F 2 "Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5" H 9038 3950 30  0001 C CNN
+F 3 "" H 9000 4100 60  0000 C CNN
+	1    9000 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Earth #PWR010
+U 1 1 561D4606
+P 9300 5100
+F 0 "#PWR010" H 9300 4850 50  0001 C CNN
+F 1 "Earth" H 9300 4950 50  0001 C CNN
+F 2 "" H 9300 5100 60  0000 C CNN
+F 3 "" H 9300 5100 60  0000 C CNN
+	1    9300 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 4100 8850 4100
+Wire Wire Line
+	9300 4850 9300 5100
+Wire Wire Line
+	9300 4350 9300 4100
+Wire Wire Line
+	9300 4100 9150 4100
+Wire Wire Line
+	9450 4600 10100 4600
+Wire Wire Line
+	10100 4700 9900 4700
+Wire Wire Line
+	9900 4700 9900 5100
+Wire Wire Line
+	4600 3100 4600 3800
+Wire Wire Line
+	4600 3800 4950 3800
+$Comp
+L C C5
+U 1 1 5623684C
+P 7300 4500
+F 0 "C5" H 7325 4600 50  0000 L CNN
+F 1 "561" H 7325 4400 50  0000 L CNN
+F 2 "Capacitors_ThroughHole:C_Rect_L7_W3.5_P5" H 7338 4350 30  0001 C CNN
+F 3 "" H 7300 4500 60  0000 C CNN
+	1    7300 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4350 7300 4000
+Connection ~ 7300 4000
+Wire Wire Line
+	7300 4650 7300 5100
+Connection ~ 7300 5100
+$Comp
+L CONN_01X02 P3
+U 1 1 56373C78
+P 1800 1500
+F 0 "P3" H 1800 1650 50  0000 C CNN
+F 1 "Power" V 1900 1500 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 1800 1500 60  0001 C CNN
+F 3 "" H 1800 1500 60  0000 C CNN
+	1    1800 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 1550 2000 2200
+Connection ~ 2000 2200
+$Comp
+L Earth #PWR011
+U 1 1 563741A5
+P 2350 1700
+F 0 "#PWR011" H 2350 1450 50  0001 C CNN
+F 1 "Earth" H 2350 1550 50  0001 C CNN
+F 2 "" H 2350 1700 60  0000 C CNN
+F 3 "" H 2350 1700 60  0000 C CNN
+	1    2350 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1450 2350 1450
+Wire Wire Line
+	2350 1450 2350 1700
+$EndSCHEMATC
