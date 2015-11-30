@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:basspreamp-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -221,7 +222,7 @@ Wire Wire Line
 Connection ~ 3150 2200
 Connection ~ 4100 2900
 $Comp
-L TL072 U1
+L TL072-RESCUE-basspreamp U1
 U 1 1 561CCF45
 P 5100 3000
 F 0 "U1" H 5050 3200 60  0000 L CNN
@@ -390,7 +391,7 @@ Wire Wire Line
 	7250 5100 7700 5100
 Connection ~ 5600 3800
 $Comp
-L TL072 U1
+L TL072-RESCUE-basspreamp U1
 U 2 1 561CE4B3
 P 8250 4100
 F 0 "U1" H 8200 4300 60  0000 L CNN
